@@ -21,7 +21,6 @@ node {
         [$class: 'StringBinding', credentialsId: 'AWS_SECRET_KEY', variable: 'AWS_SECRET_KEY']
       ])
     {
-      print "$AWS_ACCESS_KEY"
       sh "/usr/local/packer build -var 'aws_access_key=$AWS_ACCESS_KEY' -var 'aws_secret_key=$AWS_SECRET_KEY' ${packer_file}" 
     }
 
