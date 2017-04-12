@@ -45,8 +45,8 @@ sudo sed -i '/# network.host: 192.168.0.1/c\network.host: 0.0.0.0' /etc/elastics
 
 ## Set up Auto-discovery in the AWS Cloud
 sudo sed -i '/# cluster.name: my-application/c\cluster.name: esonaws' /etc/elasticsearch/elasticsearch.yml
-sudo sed -i '$ a\cloud.aws.access_key: AKIAIL2AFVPOLWOASWSA' /etc/elasticsearch/elasticsearch.yml
-sudo sed -i '$ a\cloud.aws.secret_key: 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' /etc/elasticsearch/elasticsearch.yml
+sudo sed -i '$ a\cloud.aws.access_key: $AWS_ACCESS_KEY' /etc/elasticsearch/elasticsearch.yml
+sudo sed -i '$ a\cloud.aws.secret_key: $AWS_SECRET_KEY' /etc/elasticsearch/elasticsearch.yml
 sudo sed -i '$ a\cloud.aws.region: eu-west-2' /etc/elasticsearch/elasticsearch.yml
 sudo sed -i '$ a\cloud.aws.ec2.endpoint: ec2.eu-west-2.amazonaws.com' /etc/elasticsearch/elasticsearch.yml
 sudo sed -i '$ a\discovery.type: ec2' /etc/elasticsearch/elasticsearch.yml
