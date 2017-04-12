@@ -1,0 +1,10 @@
+{ "index" : {"_id" : "e_1" } }
+{ "eventName" : "100m freestyle", "date" : "1896-07-02", "discipline" : "Swimming", "gender" : "Male", "sport" : "Aquatics", "dCode" : "3", "class" : "A"}
+{ "index" : {"_id" : "e_2" } }
+{ "eventName" : "100m freestyle for sailors", "date" : "1896-08-22", "discipline" : "Swimming", "gender" : "Male", "sport" : "Aquatics", "dCode" : "3", "class" : "A"}
+{ "index" : {"_id" : "e_3" } }
+{ "eventName" : "1200m freestyle", "date" : "1896-08-03", "discipline" : "Swimming", "gender" : "Male", "sport" : "Aquatics", "dCode" : "3", "class" : "E"}
+{ "index" : {"_id" : "e_4" } }
+{ "eventName" : "400m freestyle", "date" : "1896-07-08", "discipline" : "Swimming", "gender" : "Male", "sport" : "Aquatics", "dCode" : "3", "class" : "B"}
+{ "index" : {"_id" : "e_5" } }
+{ "eventName" : "100m", "date" : "1896-07-25", "discipline" : "Athletics", "gender" : "Male", "sport" : "Athletics", "dCode" : "3", "class" : "A"}

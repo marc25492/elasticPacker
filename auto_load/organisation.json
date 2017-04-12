@@ -1,0 +1,10 @@
+{ "index" : {"_id" : "org_1" } }
+{ "code" : "HUN-Aqu-1896", "name" : "Hungary Aquatics Squad - 1896", "dCode" : "3", "class" : "E"}
+{ "index" : {"_id" : "org_2" } }
+{ "code" : "AUT-Aqu-1896", "name" : "Austria Aquatics Squad - 1896", "dCode" : "3", "class" : "A"}
+{ "index" : {"_id" : "org_3" } }
+{ "code" : "GRE-Aqu-1896", "name" : "Greece Aquatics Squad - 1896", "dCode" : "3", "class" : "B"}
+{ "index" : {"_id" : "org_4" } }
+{ "code" : "USA-Ath-1896", "name" : "United States Athletics Squad - 1896", "dCode" : "3", "class" : "D"}
+{ "index" : {"_id" : "org_5" } }
+{ "code" : "HUN-Ath-1896", "name" : "Hungary Athletics Squad - 1896", "dCode" : "3", "class" : "A"}

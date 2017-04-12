@@ -1,0 +1,10 @@
+{ "index" : {"_id" : "o_1" } }
+{ "name" : "Athens - Gold medal", "serialNumber" : "GZ3R7N2", "dCode" : "3", "class" : "E", "details" : "Obverse: Nike with Panathinaiko Stadiumin the background, Reverse: The Olympic Flame, the opening lines of Pindar's, Eighth Olympic Ode, and the Athens Games logo", "designer" : "Elena Votsi", "mint" : "", "diameter" : "60" ,"thickness" : "5", "weight" : "135"}
+{ "index" : {"_id" : "o_2" } }
+{ "name" : "Athens - Silver medal", "serialNumber" : "SF9A2R4", "dCode" : "4", "class" : "C", "details" : "Obverse: Nike with Panathinaiko Stadiumin the background, Reverse: The Olympic Flame, the opening lines of Pindar's, Eighth Olympic Ode, and the Athens Games logo", "designer" : "Elena Votsi", "mint" : "", "diameter" : "60" ,"thickness" : "5", "weight" : "135"}
+{ "index" : {"_id" : "o_3" } }
+{ "name" : "Athens - Bronze medal", "serialNumber" : "BG1Y4W6", "dCode" : "3", "class" : "D", "details" : "Obverse: Nike with Panathinaiko Stadiumin the background, Reverse: The Olympic Flame, the opening lines of Pindar's, Eighth Olympic Ode, and the Athens Games logo", "designer" : "Elena Votsi", "mint" : "", "diameter" : "60" ,"thickness" : "5", "weight" : "135"}
+{ "index" : {"_id" : "o_4" } }
+{ "name" : "Athens - Gold medal", "serialNumber" : "GR2S7E3", "dCode" : "3", "class" : "A", "details" : "Obverse: Nike with Panathinaiko Stadiumin the background, Reverse: The Olympic Flame, the opening lines of Pindar's, Eighth Olympic Ode, and the Athens Games logo", "designer" : "Elena Votsi", "mint" : "", "diameter" : "60" ,"thickness" : "5", "weight" : "135"}
+{ "index" : {"_id" : "o_5" } }
+{ "name" : "Athens - Silver medal", "serialNumber" : "SX2A1S2", "dCode" : "3", "class" : "A", "details" : "Obverse: Nike with Panathinaiko Stadiumin the background, Reverse: The Olympic Flame, the opening lines of Pindar's, Eighth Olympic Ode, and the Athens Games logo", "designer" : "Elena Votsi", "mint" : "", "diameter" : "60" ,"thickness" : "5", "weight" : "135"}
