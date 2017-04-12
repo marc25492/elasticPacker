@@ -26,7 +26,7 @@
        {
            "type": "shell",
            "script": "install_elastic_AmazonLinux.sh",
-           "env_vars": [
+           "environment_vars": [
                "AWS_ACCESS_KEY={{user `aws_access_key`}}",
                "AWS_SECRET_KEY={{user `aws_secret_key`}}"
              ]
