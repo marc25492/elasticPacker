@@ -45,13 +45,13 @@ https://download.elastic.co/elasticsearch/release/org/elasticsearch/plugin/cloud
 There is a small amount of configuration to do. This is set within the /etc/elasticsearch/elasticsearch.yml 
  
 Note, in the elasticsearch.yml, I've set the following parameters: 
-network.host: 0.0.0.0 
-network.publish_host: _ec2_ 
-cloud.aws.access_key: <Insert Access Key> 
-cloud.aws.secret_key: <Insert Secret Key> 
-cloud.aws.region: eu-west-2 
-cloud.aws.ec2.endpoint: ec2.eu-west-2.amazonaws.com 
-discovery.type: ec2 
+- network.host: 0.0.0.0 
+- network.publish_host: _ec2_ 
+- cloud.aws.access_key: <Insert Access Key> 
+- cloud.aws.secret_key: <Insert Secret Key> 
+- cloud.aws.region: eu-west-2 
+- cloud.aws.ec2.endpoint: ec2.eu-west-2.amazonaws.com 
+- discovery.type: ec2 
 You can also set more filters to refine your search for nodes (i.e. Filter by: security groups, ec2_tags, etc) – this is useful if we've got a lot of EC2 instances to search through – It makes the process more efficient. 
 
 ## The Parameters: 
