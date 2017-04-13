@@ -7,8 +7,6 @@ sudo yum install -y java-1.7.0-openjdk-devel
 sudo export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.131-2.6.9.0.el7_3.x86_64
 
 
-
-
 ########### Install from tar.gz file (Downloaded from Elastic Homepage) ##############################
 #cd /usr/local/bin
 #sudo curl -O https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.4.1/elasticsearch-2.4.1.tar.gz
@@ -37,13 +35,12 @@ sudo bin/plugin install file:cloud-aws-2.3.3.zip
 
 ## Configure the RAM elasticsearch uses
 sudo sed -i '/#ES_HEAP_SIZE=2g/c\ES_HEAP_SIZE=512m' /etc/sysconfig/elasticsearch
-#sudo sed -i '/# bootstrap.memory_lock: true/c\bootstrap.memory_lock: true' /etc/elasticsearch/elasticsearch.yml
 
 ## Configure the network host to be 0.0.0.0
 sudo sed -i '/# network.host: 192.168.0.1/c\network.host: 0.0.0.0' /etc/elasticsearch/elasticsearch.yml
-#sudo sed -i '/# discovery.zen.ping.unicast.hosts: ["host1", "host2"]/c\discovery.zen.ping.unicast.hosts: ["35.177.232.202", "35.177.238.160"]' /etc/elasticsearch/elasticsearch.yml
 
-## Set up Auto-discovery in the AWS Cloud
+
+## Set up Auto-discovery in the AWS Cloud (using the cloud-aws plugin)
 sudo sed -i '/# cluster.name: my-application/c\cluster.name: esonaws' /etc/elasticsearch/elasticsearch.yml
 sudo sed -i '$ a\cloud.aws.access_key: '"$AWS_ACCESS_KEY" /etc/elasticsearch/elasticsearch.yml
 sudo sed -i '$ a\cloud.aws.secret_key: '"$AWS_SECRET_KEY" /etc/elasticsearch/elasticsearch.yml
@@ -57,14 +54,17 @@ sudo sed -i '$ a\discovery.type: ec2' /etc/elasticsearch/elasticsearch.yml
 ########### Starts the service & tests the connectivity
 sudo service elasticsearch start
 sleep 15
+# Check Cluster Health
 curl localhost:9200/_cluster/health?pretty
 
 sleep 5
 
+# Load in some dummy data
 cd ~/auto_load
 . ./load_data.sh
 
 sleep 5
+# Perform GET request - expects the response: Alfred Hajos
 curl localhost:9200/olympic/person/p_1
 
 
