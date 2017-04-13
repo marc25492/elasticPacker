@@ -107,12 +107,11 @@ User Authentication:
 To enable user authentication on your Elasticsearch api calls you have to download/install the Shield plugin. This needs to be installed on every node in the cluster (which will happen, as we are creating an pre-loaded image which all nodes can be based on). 
  
 Shield is enabled by carrying out the following steps: 
-Download License: 
-https://download.elastic.co/elasticsearch/release/org/elasticsearch/plugin/license/2.4.4/license-2.4.4.zip 
-Download Shield:https://download.elastic.co/elasticsearch/release/org/elasticsearch/plugin/shield/2.4.4/shield-2.4.4.zipInstall License: 
-bin/plugin install file:///path/to/file/license-2.4.4.zip 
-Install Shield: 
-bin/plugin install file:///path/to/file/shield-2.4.4.zip 
+Download License:  https://download.elastic.co/elasticsearch/release/org/elasticsearch/plugin/license/2.4.4/license-2.4.4.zip 
+Download Shield:   https://download.elastic.co/elasticsearch/release/org/elasticsearch/plugin/shield/2.4.4/shield-2.4.4.zipInstall 
+
+License:           bin/plugin install file:///path/to/file/license-2.4.4.zip 
+Install Shield:    bin/plugin install file:///path/to/file/shield-2.4.4.zip 
  
 Note: As of Elasticsearch v5, shield is part of X-Pack. 
  
