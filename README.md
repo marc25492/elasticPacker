@@ -7,7 +7,7 @@ Amazon Linux
 ## The Package: 
 Using the wget tool to download. 
 The package is being downloaded from: 
-https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/rpm/elasticsearch/2.4.4/elasticsearch-2.4.4.rpm 
+- https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/rpm/elasticsearch/2.4.4/elasticsearch-2.4.4.rpm 
 This is in an rpm format: it then uses the red hat package manager (on all centOS/Redhat/amazon linux distibutions) to install and set up a basic user called 'elasticsearch' and an 'elasticsearch' group. 
 This is version 2.4.4. 
  
@@ -18,10 +18,10 @@ Currently using java-1.7.0-openjdk-devel
 ## The Plugins: 
 aws-cloud: 
 Which can be downloaded from: 
-https://download.elastic.co/elasticsearch/release/org/elasticsearch/plugin/cloud-aws/2.4.4/cloud-aws-2.4.4.zip 
+- https://download.elastic.co/elasticsearch/release/org/elasticsearch/plugin/cloud-aws/2.4.4/cloud-aws-2.4.4.zip 
 Shield: 
 Which can be downloaded from : 
-https://download.elastic.co/elasticsearch/release/org/elasticsearch/plugin/license/2.4.4/license-2.4.4.ziphttps://download.elastic.co/elasticsearch/release/org/elasticsearch/plugin/shield/2.4.4/shield-2.4.4.zip 
+- https://download.elastic.co/elasticsearch/release/org/elasticsearch/plugin/license/2.4.4/license-2.4.4.ziphttps://download.elastic.co/elasticsearch/release/org/elasticsearch/plugin/shield/2.4.4/shield-2.4.4.zip 
  
 ## Configuration of Elasticsearch 
  
@@ -33,8 +33,8 @@ Note: the default is 2 Gb and this command changes it to 512 Mb – (because I h
 ## General Networking  
 Elasticsearch nodes are to be run on AWS EC2 instances. EC2 instances are part of a security groups – which can be configured to allow/refuse access across different IP/ports. 
 Ports for Elasticsearch: 
-9200: To access the RESTful api from outside the cluster 
-9300: For the nodes within the cluster to internally speak to each other. 
+- 9200: To access the RESTful api from outside the cluster 
+- 9300: For the nodes within the cluster to internally speak to each other. 
 (At the moment, you can access the cluster (I.e make api calls) from hitting any node's IP on port 9200. I'm not sure if it can be configured to have one central access point/ load-balancer type approach) 
  
 ## Clustering EC2 nodes in AWS 
@@ -55,14 +55,14 @@ Note, in the elasticsearch.yml, I've set the following parameters:
 You can also set more filters to refine your search for nodes (i.e. Filter by: security groups, ec2_tags, etc) – this is useful if we've got a lot of EC2 instances to search through – It makes the process more efficient. 
 
 ## The Parameters: 
-“network.publish_host: _ec2_”: This tells the node to publish its private ipv4 address – the other nodes can see this within AWS environment – and saves publishing its public address. 
-“cloud.aws.region: eu-west-2”: Needs to be set to the aws region the nodes are running in. 
-“cloud.aws.ec2.endpoint: ec2.eu-west-2.amazonaws.com”: Small workaround which needs to be kept if we are working in the eu-west-2 region (London) – the plugin for 2.4.4 wasn't updated to include the endpoint for the London region  
+- “network.publish_host: _ec2_”: This tells the node to publish its private ipv4 address – the other nodes can see this within AWS environment – and saves publishing its public address. 
+- “cloud.aws.region: eu-west-2”: Needs to be set to the aws region the nodes are running in. 
+- “cloud.aws.ec2.endpoint: ec2.eu-west-2.amazonaws.com”: Small workaround which needs to be kept if we are working in the eu-west-2 region (London) – the plugin for 2.4.4 wasn't updated to include the endpoint for the London region  
  
 ## Permissions in AWS 
 In order for the nodes to cluster together we are required to give an AWS ACCESS KEY/AWS SECRET KEY to the node: 
-cloud.aws.access_key: <Insert Access Key> 
-cloud.aws.secret_key: <Insert Secret Key> 
+- cloud.aws.access_key: <Insert Access Key> 
+- cloud.aws.secret_key: <Insert Secret Key> 
 This is set within the /etc/elasticsearch/elasticsearch.yml. 
  
 So, will have to configure a special user (e.g. 'Elasticsearch_user') in the AWS IAM to give specific permissions to allow the node to discover other nodes (to form a cluster!) 
@@ -96,9 +96,9 @@ After it's in, a script is run to make POST requests to localhost:9200 – which
 ## Making API Calls 
 Now that data has been loaded, you can externally (I.e ) call the api on: 
  
-<Public_IP_of_EC2_Instance>:9200/olympic/person/p_1 
+- <Public_IP_of_EC2_Instance>:9200/olympic/person/p_1 
 or, 
-<Public_DNS_of_EC2_Instance>:9200/olympic/person/p_1 
+- <Public_DNS_of_EC2_Instance>:9200/olympic/person/p_1 
  
 ## Elasticsearch Security 
  
@@ -108,13 +108,13 @@ To enable user authentication on your Elasticsearch api calls you have to downlo
  
 Shield is enabled by carrying out the following steps: 
 Download License: 
-https://download.elastic.co/elasticsearch/release/org/elasticsearch/plugin/license/2.4.4/license-2.4.4.zip 
+- https://download.elastic.co/elasticsearch/release/org/elasticsearch/plugin/license/2.4.4/license-2.4.4.zip 
 Download Shield:   
-https://download.elastic.co/elasticsearch/release/org/elasticsearch/plugin/shield/2.4.4/shield-2.4.4.zipInstall 
+- https://download.elastic.co/elasticsearch/release/org/elasticsearch/plugin/shield/2.4.4/shield-2.4.4.zipInstall 
 License:           
-bin/plugin install file:///path/to/file/license-2.4.4.zip 
+- bin/plugin install file:///path/to/file/license-2.4.4.zip 
 Install Shield:    
-bin/plugin install file:///path/to/file/shield-2.4.4.zip 
+- bin/plugin install file:///path/to/file/shield-2.4.4.zip 
  
 Note: As of Elasticsearch v5, shield is part of X-Pack. 
  
